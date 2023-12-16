@@ -2,7 +2,7 @@
 
 namespace Friends.DAL.Models;
 
-public class Friend
+public record Friend
 {
     [JsonPropertyName("id")]
     public int Id { get; set; }

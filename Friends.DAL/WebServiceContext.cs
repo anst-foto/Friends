@@ -3,7 +3,7 @@ using Friends.DAL.Models;
 
 namespace Friends.DAL;
 
-public class WebServiceContext
+public class WebServiceContext : IContext
 {
     private const string URL = "https://jsonplaceholder.typicode.com/users";
     public IEnumerable<Friend>? Friends { get; private set; }

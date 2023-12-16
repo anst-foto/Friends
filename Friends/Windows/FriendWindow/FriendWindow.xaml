@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:Friends.Windows.FriendWindow"
         mc:Ignorable="d"
         Title="FriendWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel x:Name="Panel"/>
 </Window>

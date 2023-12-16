@@ -13,7 +13,7 @@ public partial class FriendComponent : UserControl
 
         LinkUserName.Click += (sender, args) =>
         {
-            new FriendWindow().Show();
+            new FriendWindow(friend).Show();
         }; 
         UserName.Text = friend.Username;
 

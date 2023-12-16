@@ -1,6 +1,9 @@
-﻿namespace Friends.DAL;
+﻿using Friends.DAL.Models;
 
-public interface IContext
+namespace Friends.DAL;
+
+public interface IContext<T> where T : Friend
 {
+    IEnumerable<T>? Friends { get; set; }
     Task LoadAsync();
 }

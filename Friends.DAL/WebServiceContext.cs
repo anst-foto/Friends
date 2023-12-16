@@ -3,10 +3,10 @@ using Friends.DAL.Models;
 
 namespace Friends.DAL;
 
-public class WebServiceContext : IContext
+public class WebServiceContext : IContext<Friend>
 {
     private const string URL = "https://jsonplaceholder.typicode.com/users";
-    public IEnumerable<Friend>? Friends { get; private set; }
+    public IEnumerable<Friend>? Friends { get; set; }
 
     public async Task LoadAsync()
     {

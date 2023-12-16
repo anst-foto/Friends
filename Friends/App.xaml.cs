@@ -10,4 +10,3 @@ namespace Friends;
 public partial class App : Application
 {
 }
-

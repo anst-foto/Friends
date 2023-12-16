@@ -6,12 +6,8 @@ namespace Friends.Windows.MainWindow;
 
 public partial class MainWindow : Window
 {
-    private readonly AppContext _context;
-    
     public MainWindow()
     {
-        _context = new AppContext();
-        
         InitializeComponent();
         
         Loaded += OnLoaded;
@@ -19,7 +15,8 @@ public partial class MainWindow : Window
 
     private async void OnLoaded(object sender, RoutedEventArgs e)
     {
-        var friends = await _context.GetFriendsAsync();
+        var context = new AppContext();
+        var friends = await context.GetFriendsAsync();
 
         if (friends is null)
         {

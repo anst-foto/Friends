@@ -7,9 +7,9 @@ public class AppContext
 {
     private readonly IContext<DAL.Models.Friend> _context;
 
-    public AppContext(IContext<DAL.Models.Friend> context)
+    public AppContext(IContext<DAL.Models.Friend>? context = null)
     {
-        _context = context;
+        _context = context ?? new WebServiceContext();
     }
 
     public async Task<IEnumerable<Friend>?> GetFriendsAsync()
